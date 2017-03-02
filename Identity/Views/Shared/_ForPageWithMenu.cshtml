@@ -1,0 +1,58 @@
+﻿<!DOCTYPE html>
+<style>
+
+body {
+font-family:Cambria,Georgia,"Times New Roman";
+margin:0;
+}
+
+div#header div.title, div.item h3, div.item h4 {
+font: bold lem "Arial Norrow","Franklin Gothic Medium",Arial;
+}
+
+div#content {
+border-left:2px solid gray;
+margin-left: 9em;
+padding:1em;
+}
+
+div#categories {
+float:left;
+width:15em;
+padding: .3em;
+}
+div.item {
+    border-top:1px dotted gray;
+    padding-top:.7em;
+    margin-bottom: .7em;
+}
+    div.item:first-child {
+    border-top:none;
+    padding-top:0;
+    }
+    div.item h3 {
+    font-size:1.3em;
+    margin:0 0 .25em 0;
+    }
+    div.item h4 {
+    font-size:1.1em;
+    margin:.4em 0 0 0;
+    }
+</style>
+
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+    <div id="categories">
+        @{Html.RenderAction("GetRole", "ForRoleMenu");}
+    </div>
+    <div class="container body-content">
+        @RenderBody()
+        <hr />
+
+    </div>
+</body>
+</html>

@@ -1,0 +1,17 @@
+﻿@model Identity.Models.ProfileViewEditModel
+
+@{
+    ViewBag.Title = "Edit";
+}
+
+<h2>Изменить профиль</h2>
+
+@using (@Html.BeginForm())
+{
+    <div class="form-group">
+        @Html.EditorForModel()
+    </div>
+<input class="btn btn-primary" type="submit" value="ok" />
+@Html.ActionLink("Cancel", "Prof", "User")
+    
+}

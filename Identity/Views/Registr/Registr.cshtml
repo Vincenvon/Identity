@@ -1,0 +1,16 @@
+﻿@model Identity.Models.RegistViewModel
+
+@{
+    ViewBag.Title = "Regist";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<h2>Регистрация</h2>
+@using (Html.BeginForm())
+{
+    <div class="form-group">
+        @Html.EditorForModel(new { @class = "form-control" })
+    </div>
+    <input class="btn btn-primary" type="submit" value="ok" />
+    @Html.ActionLink("Cancel", "Login", "Home");
+
+}
